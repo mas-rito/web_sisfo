@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Informasi - UNTAN</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      .font-jakarta {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .gradient-bg {
+        background-image: url("./images/background-gradient.png");
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+      }
+      @keyframes floatAnimation {
+        0% {
+          transform: translateY(0px); /* Starting position */
+        }
+        50% {
+          transform: translateY(-10px); /* Move up 10px */
+        }
+        100% {
+          transform: translateY(0px); /* Return to starting position */
+        }
+      }
+
+      .float {
+        animation: floatAnimation 6s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Navigation -->
+    <nav class="absolute top-0 left-0 right-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="text-2xl font-semibold text-white">Sistem Informasi</div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#profile"
+              class="text-gray-700 hover:text-blue-600 transition"
+              >Profile</a
+            >
+            <a
+              href="#fokus-keahlian"
+              class="text-gray-700 hover:text-blue-600 transition"
+              >Fokus Keahlian</a
+            >
+            <a
+              href="#galeri"
+              class="text-gray-700 hover:text-blue-600 transition"
+              >Galeri</a
+            >
+            <a href="#faq" class="text-gray-700 hover:text-blue-600 transition"
+              >FAQ</a
+            >
+          </div>
+
+          <button
+            class="bg-white border border-blue-200 rounded-full px-6 py-2 flex items-center space-x-2 hover:bg-blue-50 transition"
+          >
+            <span class="font-bold text-blue-700">Hubungi Kami</span>
+            <svg
+              class="w-5 h-5 text-blue-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="pt-32 pb-20 gradient-bg relative overflow-hidden gradient-bg"
+    >
+      <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+        <div
+          class="inline-flex items-center space-x-2 bg-white rounded-full px-6 py-2 mb-6 shadow-sm"
+        >
+          <svg
+            class="w-5 h-5 text-blue-600"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+            />
+          </svg>
+          <span class="text-blue-800 font-medium"
+            >#1 Prodi Sistem Informasi di UNTAN</span
+          >
+        </div>
+
+        <h1
+          class="text-6xl md:text-7xl text-blue-800 font-semibold leading-[120%] mb-6 font-jakarta"
+        >
+          Membangun <br />
+          Perkembangan Digital<br />Yang Berkelanjutan
+        </h1>
+
+        <p class="text-blue-800/90 mb-12 max-w-xl mx-auto">
+          Mengubah Informasi Menjadi Inovasi Berkelanjutan. Bergabunglah dengan
+          Barisan Penggerak Perubahan Digital.
+        </p>
+      </div>
+
+      <!-- Profile Images -->
+      <div class="max-w-7xl mx-auto px-6 mt-16 relative z-10">
+        <div class="flex justify-center gap-4 overflow-hidden">
+          <div
+            class="w-64 h-80 bg-blue-100 rounded-3xl overflow-hidden flex-shrink-0"
+          >
+            <div
+              class="w-full h-full bg-gradient-to-br p-1 from-blue-200 to-blue-100"
+            >
+                <img src="./images/pengembangan-perangkat-lunak.jpg" alt="pengembangan-perangkat-lunak" class="size-full object-cover rounded-[21px]">
+            </div>
+          </div>
+          <div
+            class="w-64 h-80 bg-yellow-100 rounded-3xl overflow-hidden flex-shrink-0"
+          >
+            <div
+              class="w-full h-full bg-gradient-to-br p-1 from-yellow-200 to-yellow-100"
+            >
+                <img src="./images/inteligensi-bisnis.jpg" alt="inteligensi-bisnis" class="size-full object-cover rounded-[21px]">
+            </div>
+          </div>
+          <div
+            class="w-64 h-80 bg-green-100 rounded-3xl overflow-hidden flex-shrink-0"
+          >
+            <div
+              class="w-full h-full bg-gradient-to-br p-1 from-green-200 to-green-100"
+            >
+                <img src="./images/coding.png" alt="coding" class="size-full object-cover rounded-[21px]">
+            </div>
+          </div>
+          <div
+            class="w-64 h-80 bg-orange-100 rounded-3xl overflow-hidden flex-shrink-0"
+          >
+            <div
+              class="w-full h-full bg-gradient-to-br p-1 from-orange-200 to-orange-100"
+            >
+                <img src="./images/buku.png" alt="buku" class="size-full object-cover rounded-[21px]">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-40 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16 relative z-10">
+          <h2 class="text-5xl font-bold text-gray-900 font-jakarta">
+            Profil Prodi<br />Sistem Informasi
+          </h2>
+        </div>
+
+        <!-- Circular Feature Display -->
+        <div class="relative h-[600px] flex items-center justify-center">
+          <!-- Concentric Circles -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div
+              class="absolute size-[800px] rounded-full border border-blue-50 bg-blue-50/40"
+            ></div>
+            <div
+              class="absolute size-[600px] rounded-full border border-blue-100 bg-blue-50/50"
+            ></div>
+            <div
+              class="absolute size-[500px] rounded-full border border-blue-200 bg-blue-50/60"
+            ></div>
+            <div
+              class="absolute size-[380px] rounded-full border border-blue-300 bg-blue-50/70"
+            ></div>
+          </div>
+
+          <!-- Center Video Card -->
+          <div
+            class="relative z-10 h-96 aspect-[16/9] bg-white rounded-3xl shadow-2xl overflow-hidden"
+          >
+            <iframe
+              src="https://www.youtube.com/embed/STDD73vhRhs"
+              title="Jurusan Sistem Informasi FMIPA Untan"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              class="size-full"
+            ></iframe>
+          </div>
+
+          <!-- Feature Cards -->
+          <div
+            class="absolute -top-20 right-0 z-10 w-96 float bg-white rounded-2xl shadow-lg p-6"
+          >
+            <h4 class="font-bold text-gray-900 mb-2">Kualifikasi Dosen</h4>
+            <p class="text-sm text-gray-600">
+              Dosen Program Studi Sistem Informasi memiliki latar belakang
+              pendidikan strata 2 (S-2) dibidang informatika, manajemen sistem
+              informasi, matematika dan ilmu komputer, informatika dan sistem
+              informasi, Teknik dan teknologi informasi, sistem informasi, dan
+              teknologi informasi
+            </p>
+          </div>
+
+          <div
+            class="absolute bottom-10 left-0 z-10 w-72 float bg-white rounded-2xl shadow-lg p-6"
+          >
+            <h4 class="font-bold text-gray-900 mb-2">Akreditasi</h4>
+            <p class="text-sm text-gray-600">
+              Program studi Sistem Informasi mendapatkan predikat akreditas
+              (BAIK SEKALI) oleh Lembaga Akreditasi Mandiri Informatika dan
+              Komputer No. SK : 077/SK/LAM-INFOKOM/Ak/S/VIII/2023
+            </p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-center z-10 relative">
+          Program Studi Sistem Informasi Universitas Tanjungpura merupakan salah
+          satu
+          <strong
+            >program studi strata 1 (S-1) yang berada di Fakultas Matematika dan
+            Ilmu Pengetahuan Alam (FMIPA).</strong
+          >
+          Fokus pendidikan dan pembelajaran pada Program Studi Sistem Informasi
+          Universitas Tanjungpura pada
+          <strong
+            >bidang keahlian Manajemen Sistem Informasi, Intelejensi Bisnis, dan
+            Pengembangan Perangkat Lunak.</strong
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- Fokus Keahlian Section -->
+    <section id="fokus-keahlian" class="py-40 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <!-- Left Side - Steps -->
+          <div>
+            <div class="mb-16">
+              <h2 class="text-5xl font-bold text-gray-900 font-jakarta">
+                Fokus Keahlian
+              </h2>
+            </div>
+
+            <div class="space-y-8">
+              <!-- keahlian 1 -->
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center"
+                  >
+                    <span class="text-2xl font-bold text-blue-600">01</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    Manajemen Sistem Informasi
+                  </h3>
+                  <p class="text-gray-600">
+                    Mempelajari interaksi sistem-sistem informasi yang
+                    bertanggung jawab mengumpulkan dan mengolah data untuk
+                    menyediakan informasi yang berguna bagi semua tingkatan
+                    manajemen di dalam kegiatan perencanaan dan pengendalian
+                  </p>
+                </div>
+              </div>
+
+              <!-- keahlian 2 -->
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center"
+                  >
+                    <span class="text-2xl font-bold text-orange-600">02</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    Pengembangan Perangkat Lunak
+                  </h3>
+                  <p class="text-gray-600">
+                    Serangkaian aktivitas ilmu komputer yang didedikasikan untuk
+                    proses pembuatan, perancangan, penerapan, dan dukungan
+                    perangkat lunak
+                  </p>
+                </div>
+              </div>
+
+              <!-- keahlian 3 -->
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center"
+                  >
+                    <span class="text-2xl font-bold text-purple-600">03</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    Inteligensi Bisnis
+                  </h3>
+                  <p class="text-gray-600">
+                    Sekumpulan teknik dan alat yang mengkombinasikan analisis
+                    bisnis, data mining, visualisasi data, alat dan
+                    infrastruktur data, serta aplikasinya digunakan untuk
+                    mentransformasi data mentah menjadi sebuah informasi yang
+                    dapat berguna dalam proses pengambilan keputusan bisnis.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side - Images -->
+          <div class="relative h-[500px]">
+            <img
+              src="images/pengembangan-perangkat-lunak.jpg"
+              alt="Pengembangan Perangkat Lunak"
+              class="absolute top-0 right-0 w-72 h-96 object-cover rounded-3xl"
+            />
+            <img
+              src="images/inteligensi-bisnis.jpg"
+              alt="Inteligensi Bisnis"
+              class="absolute top-0 left-0 w-56 h-80 object-cover rounded-3xl"
+            />
+            <!-- Mahasiswa Badge -->
+            <div
+              class="absolute bottom-0 left-0 bg-white rounded-2xl shadow-xl p-6 border border-gray-100"
+            >
+              <div class="flex items-center space-x-4">
+                <div class="flex -space-x-2">
+                  <img
+                    src="images/mahasiswa/fadjri.png"
+                    alt="Fadjri"
+                    class="w-14 h-14 rounded-full object-cover border-2 border-white bg-white"
+                  />
+                  <img
+                    src="images/mahasiswa/marcello.png"
+                    alt="Marcello"
+                    class="w-14 h-14 rounded-full object-cover border-2 border-white bg-white"
+                  />
+                  <img
+                    src="images/mahasiswa/rito_ramadhan.png"
+                    alt="Rito Ramadhan"
+                    class="w-14 h-14 rounded-full object-cover border-2 border-white bg-gray-100"
+                  />
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-blue-600">1.212</div>
+                  <div class="text-sm text-gray-600">Mahasiswa</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeri" class="py-32 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="text-5xl mb-12 text-center font-bold text-gray-900 font-jakarta"
+        >
+          Galeri
+        </h2>
+
+        <!-- Gallery Cards -->
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="group relative h-80 bg-gradient-to-br from-orange-300 to-yellow-200 rounded-3xl overflow-hidden cursor-pointer"
+          >
+            <div class="absolute inset-0">
+              <img
+                src="images/galeri/yudisium.png"
+                alt="Yudisium"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute w-full bottom-0 left-0 bg-gradient-to-t from-blue-800 h-1/2 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-white font-bold text-xl mb-1">Yudisium</h3>
+                  <p class="text-white/80 text-sm">
+                    Yudisium Prodi Sistem Informasi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group relative h-80 bg-gradient-to-br from-green-300 to-emerald-200 rounded-3xl overflow-hidden cursor-pointer"
+          >
+            <div class="absolute inset-0">
+              <img
+                src="images/galeri/pmkm.png"
+                alt="PMKM"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute w-full bottom-0 left-0 bg-gradient-to-t from-blue-800 h-1/2 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-white font-bold text-xl mb-1">PMKM</h3>
+                  <p class="text-white/80 text-sm">
+                    PMKM Di Mempawah Mangrove Park
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group relative h-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden cursor-pointer"
+          >
+            <div class="absolute inset-0">
+              <img
+                src="images/galeri/sisfo-day.png"
+                alt="Sisfo Day"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute w-full bottom-0 left-0 bg-gradient-to-t from-blue-800 h-1/2 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-white font-bold text-xl mb-1">
+                    Sisfo Day 2023
+                  </h3>
+                  <p class="text-white/80 text-sm">
+                    Makrab mahasiswa Sistem Informasi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2
+          class="text-5xl font-bold text-gray-900 text-center mb-12 font-jakarta"
+        >
+          Frequently Asked Questions
+        </h2>
+
+        <div class="space-y-4">
+          <!-- FAQ Item -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-200">
+            <div class="flex items-center justify-between cursor-pointer">
+              <h3 class="font-semibold text-lg text-gray-900">
+                Apa yang dipelajari di Prodi Sistem Informasi?
+              </h3>
+              <svg
+                class="w-6 h-6 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 rounded-2xl p-6 border border-blue-200">
+            <div class="flex items-start justify-between">
+              <div class="flex-1">
+                <div
+                  class="flex items-center justify-between cursor-pointer mb-4"
+                >
+                  <h3 class="font-semibold text-lg text-gray-900">
+                    Bisa kerja sebagai apa setelah lulus?
+                  </h3>
+                  <svg
+                    class="w-6 h-6 text-blue-600 transform rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Setelah lulus dari Prodi Sistem Informasi, Anda bisa bekerja
+                  sebagai Programmer, Analis Sistem, atau sebagai yang lain.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-gray-200">
+            <div class="flex items-center justify-between cursor-pointer">
+              <h3 class="font-semibold text-lg text-gray-900">
+                Apa persyaratan untuk masuk Prodi Sistem Informasi?
+              </h3>
+              <svg
+                class="w-6 h-6 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-gray-200">
+            <div class="flex items-center justify-between cursor-pointer">
+              <h3 class="font-semibold text-lg text-gray-900">
+                Apa saja kegiatan kemahasiswaan di Prodi Sistem Informasi?
+              </h3>
+              <svg
+                class="w-6 h-6 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative w-screen h-screen p-24">
+      <div
+        class="gradient-bg text-center flex flex-col justify-center items-center rounded-3xl size-full"
+      >
+        <div class="flex items-center justify-center mb-12 gap-4">
+          <img
+            src="images/logo/kampus-merdeka.png"
+            alt="Kampus Merdeka"
+            class="size-14 object-cover rounded-xl"
+          />
+          <img
+            src="images/logo/untan.png"
+            alt="UNTAN"
+            class="size-14 object-cover rounded-xl"
+          />
+          <img
+            src="images/logo/fmipa.png"
+            alt="FMIPA"
+            class="size-14 object-cover rounded-xl"
+          />
+          <img
+            src="images/logo/hmsi.png"
+            alt="HMSI"
+            class="size-14 object-cover rounded-xl"
+          />
+        </div>
+
+        <h2
+          class="text-5xl md:text-6xl text-blue-800 font-semibold mb-6 font-jakarta"
+        >
+          Masa Depan Informasi<br />Ada di Tangan Anda
+        </h2>
+        <p class="text-xl text-blue-800/90 font-semibold mb-8">
+          Ambil Langkah Pertama Sekarang!
+        </p>
+        <button class="bg-blue-800 text-white px-6 py-2 rounded-full">
+          Hubungi Kami
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 pt-20 pb-8">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-5 gap-12 mb-16">
+          <!-- Company Info -->
+          <div class="md:col-span-2">
+            <div class="text-2xl font-bold text-blue-600 mb-4">
+              Sistem Informasi
+            </div>
+            <div class="text-sm text-gray-700 leading-relaxed space-y-2">
+              <p>
+                <span class="font-bold text-gray-900">Alamat:</span>
+              </p>
+              <p>Jl. Prof. Dr. H. Nawawi - Kode Pos: 78124</p>
+              <p><span class="font-semibold">Phone:</span> (0561) 577963</p>
+              <p><span class="font-semibold">Email:</span> Sisfo@untan.ac.id</p>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-bold text-gray-900 text-lg mb-4">Quick Links</h4>
+            <ul class="space-y-3 text-gray-600">
+              <li><a href="#profile" class="hover:text-blue-600">Profile</a></li>
+              <li><a href="#fokus-keahlian" class="hover:text-blue-600">Fokus Keahlian</a></li>
+              <li><a href="#galeri" class="hover:text-blue-600">Galeri</a></li>
+              <li><a href="#faq" class="hover:text-blue-600">FAQ</a></li>
+            </ul>
+          </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="pt-8 border-t border-gray-200 flex flex-col items-center justify-between"
+        >
+          <p class="text-gray-600 text-sm mb-4 md:mb-0">
+            ©2025 All rights reserved
+          </p>
+
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
