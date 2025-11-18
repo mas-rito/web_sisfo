@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistem Informasi - UNTAN</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,38 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Manrope", sans-serif;
-      }
-      .font-jakarta {
-        font-family: "Plus Jakarta Sans", sans-serif;
-      }
-      .gradient-bg {
-        background-image: url("./images/background-gradient.png");
-        background-size: contain;
-        background-position: top;
-        background-repeat: no-repeat;
-      }
-      @keyframes floatAnimation {
-        0% {
-          transform: translateY(0px); /* Starting position */
-        }
-        50% {
-          transform: translateY(-10px); /* Move up 10px */
-        }
-        100% {
-          transform: translateY(0px); /* Return to starting position */
-        }
-      }
-
-      .float {
-        animation: floatAnimation 6s ease-in-out infinite;
-      }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-white">
     <!-- Navigation -->
@@ -647,9 +616,9 @@
     <!-- Footer -->
     <footer class="bg-gray-50 pt-20 pb-8">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-5 gap-12 mb-16">
+        <div class="grid grid-cols-5 gap-12 mb-16">
           <!-- Company Info -->
-          <div class="md:col-span-2">
+          <div class="md:col-span-3">
             <div class="text-2xl font-bold text-blue-600 mb-4">
               Sistem Informasi
             </div>
@@ -684,10 +653,6 @@
           <div
             class="pt-8 border-t border-gray-200 flex flex-col items-center justify-between"
           >
-            <p class="text-gray-600 text-sm mb-4 md:mb-0">
-              ©2025 All rights reserved
-            </p>
-
             <div class="flex space-x-4">
               <a
                 href="#"
@@ -730,6 +695,9 @@
                 </svg>
               </a>
             </div>
+            <p class="text-gray-600 text-sm mb-4 md:mb-0">
+              ©2025 All rights reserved
+            </p>
           </div>
         </div>
       </div>
